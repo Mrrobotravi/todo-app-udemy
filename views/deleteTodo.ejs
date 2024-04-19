@@ -1,0 +1,21 @@
+<%- include("Partials/headder") %>
+
+    <div class="container">
+
+        <h1 class="text-center"> Delete Task</h1>
+        <a class="btn btn-warning" type="btn" href="/">Back </a>
+        <br />
+        <br />
+
+        <h2>You Want to delete This Task 
+            <a class="btn btn-danger" type="btn" href="/confirm-delete?id=<%= id %>&confirm=yes">Yes </a>
+            <a class="btn btn-success" type="btn" href="/confirm-delete?id=<%= id %>&confirm=no">No </a>
+        </h2>
+
+
+
+
+    </div>
+
+
+    <%- include("Partials/footer") %>

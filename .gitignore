@@ -1,1 +1,17 @@
 /node_module
+.env
+
+# const express = require("express");
+# cont mongoose = require("mongoose");
+
+# const app = express();
+
+# const connectionUrt = "Url"
+
+# mongoose.connect(connectionUrt).then(() => console.log("data base is connect successful")).catch((error) => console.log(error));
+
+# PORT = 9000; 
+
+# app.listen(PORT , ()=>{
+#  console.log(`server in running port ${PORT}`);
+# });

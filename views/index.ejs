@@ -1,0 +1,39 @@
+<%- include("Partials/headder") %>
+
+    <div class="container">
+
+        <h1 class="text-center"> Todo-App</h1>
+        <a class="btn btn-primary" type="btn" href="/add-todo">Add Task </a>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Title</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Create at</th>
+                    <th scope="col">Update at</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <% for(let i =0; i < todos.length ; i++) {%>
+                        <td><%= todos[i].title %></td>
+                        <td><%= todos[i].desc %></td>
+                        <td><%= moment(todos[i].createdAt).format("DD-MM-YYYY , HH:mm:ss")  %></td>
+                        <td><%= moment(todos[i].updatedAt).format("DD-MM-YYYY , HH:mm:ss")  %></td>
+                        <td>
+                            <a type="button" href="/update-todo?id=<%= todos[i]._id%>" class="btn btn-success">Edit</a>
+                            <a type="button" href="/delete-todo?id=<%= todos[i]._id%>" class="btn btn-danger">Delete</a>
+                        </td>
+                    
+                   
+                </tr>
+                <%}%> 
+            </tbody>
+        </table>
+    </div>
+
+
+
+    <%- include("Partials/footer") %>

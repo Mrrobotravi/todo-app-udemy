@@ -1,0 +1,27 @@
+<%- include("Partials/headder") %>
+
+    <div class="container ">
+
+         <h1 class="text-center mb-100">Add new Tast </h1>
+
+         <a type="submit" href="/" class="btn btn-primary">Back</a> <br/>
+         <br/>
+
+        <form action="/add-todo" method="post">
+            <div class="mb-3">
+                <label for="title" class="form-label ">Title</label>
+                <input type="text" class="form-control " name="title" value="">
+              
+
+            </div>
+            <div class="mb-3">
+                <label for="desc" class="form-label">Description</label>
+                <input type="text" class="form-control" name="desc" value="">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+
+    <%- include("Partials/footer") %>
